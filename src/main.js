@@ -28,6 +28,7 @@ Preload.prototype.preload = function() {
 
   // Move these to load later
   this.game.load.spritesheet('test_sheet', 'asset/image/test.png', 32, 32);
+  this.game.load.image('test_sheet_sprite', 'asset/image/test.png');
 };
 Preload.prototype.create = function() {
   this.game.state.start('Gameplay');
@@ -36,9 +37,9 @@ Preload.prototype.create = function() {
 
 
 var main = function () {
-	console.log('hello, agbic! 😊');
+	console.log('hello, noise! 😊');
 
-	var game = new Phaser.Game(640, 480);
+	var game = new Phaser.Game(640 * 2, 480 * 2);
 	game.state.add('Preload', Preload, false);
   game.state.add('Gameplay', Gameplay, false);
 
